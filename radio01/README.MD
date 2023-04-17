@@ -3,10 +3,7 @@
 ### nocnoc37
 ##### Todos los archivos necesarios para el reto son accesibles aquí --> [ARCHIVOS](WWW.ARCHIVOS)
 ###### noise filtering - modulation scheme - signal demodulation - signal decoding - binary/ascii
-
 ---
-<br>    
-
 ### CONTENT
 ---  
 THE CHALLENGE BEGS THE FOLLOWING QUESTION:  
