@@ -22,7 +22,8 @@ For those of you who have already played with SDR devices, you may have come acr
 Feel free to chose your own, but for the purpose of this challenge I will show you how to solve it with [UniversaRadioHacker](https://github.com/jopohl/urh) <-- Link to the repository for easy install.  
 
 ---   
-Once in URH, open signals.raw and zoom-in in one of the packets.
+Once in URH, open signals.raw and zoom-in in one of the packets.  
+
 ![signal1](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/signal1.png?raw=true)  
 ![signal1zoomed](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/signal1zoomed.png?raw=true)
 
