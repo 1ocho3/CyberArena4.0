@@ -14,9 +14,10 @@ THE CHALLENGE BEGS THE FOLLOWING QUESTION:
 ---  
 
 We are given the following files:  
+
 -The contract deployed on the local blockchain, `contract.sol`, written in Solidity language.  
 -What appears to be two text files `ABI_and_contract.txt` and `accounts.txt`.  
-    -`ABI_and_contract.txt` holds the address to the contract.sol deployed on `ctf.cyb3r4rena.com:8545` and the ABI content necessary to interact with the contract. I will get into how smart contracts work later on.  
+    -`ABI_and_contract.txt` holds the address to the contract.sol deployed on `ctf.cyb3r4rena.com:8545` and the ABI content necessary to interact with the  contract. I will get into how smart contracts work later on.  
     -`accounts.txt` holds 299 diferent accounts and private signatures, to try to prevent participants from using the same account at the same time.  
 
 ![content](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/content.png?raw=true)    
