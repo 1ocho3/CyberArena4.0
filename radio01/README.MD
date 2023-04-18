@@ -39,7 +39,7 @@ Now that you understand what types of modulations there are, you can guess this 
 
 Knowing this, hop onto urh, and set modulation to FSK and hit AUTODETECT PARAMETERS.  
 The signal is so clear that we won't need a bandpass filter.
-After doing this, set "Signal view" to demodulated, as URH will interpret de ones and zeros and give you the following view:  
+After doing this, set "Signal view" to demodulated, as URH will interpret the ones and zeros and give you the following view:  
 
 ![signal1 demodulated view](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/signal1%20demodulated%20view.png?raw=true)
   
