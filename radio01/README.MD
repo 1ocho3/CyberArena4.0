@@ -14,7 +14,7 @@ Unzipping the file we are given, (```$ unzip radio01```) outputs the following:
 -Furthermore we can see that it is a .raw file (basic raw data)  
 -Binwalk doesn't retrieve any valuable information:
 
-![screenshot showing various command line inputs: 1st unzip radio01 2nd ls: radio01 ](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/content-initial-approach.png?raw=true)  
+![screenshot showing various command line inputs: 1st unzip radio01 2nd ls: radio01 ](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/content-initial-approach-terminal.png?raw=true)  
 
 <br>
 
