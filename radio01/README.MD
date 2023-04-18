@@ -28,7 +28,7 @@ Once in URH, open signals.raw and zoom-in on one of the packets.
 ![signal1zoomed](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/signal1zoomed.png?raw=true)
 
 Now its time to guess the modulation scheme. There are 3 types: Amplitude, Frecuency, and Phase modulation. 
-They are easily recognizable. Hereby I give you the scheme to recognize modulation schemes, and a wonderful post to a deeper understanding.  
+They are easily recognizable. Hereby I hand the diagram to recognize modulation schemes, and a wonderful post to a deeper understanding.  
 
 ---
 ![modulation scheme](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/modulation-scheme.jpg?raw=true)  
