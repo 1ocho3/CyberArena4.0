@@ -35,7 +35,7 @@ Let's open `ABI_and_contract.txt`:
 We can use an online tool to convert the ABI to .sol for easier understanding. For now, it's only necessary to know that the contract address and the ABI file, are the two keys that bring access to the contract.  
 [ABI to SOL online tool](https://gnidan.github.io/abi-to-sol/)  
 
-```sql
+```s
 pragma solidity >=0.7.0 <0.9.0;
 
 interface MyInterface {
