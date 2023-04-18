@@ -57,13 +57,13 @@ With this we know:
 -There is a function called `getFlag` which returns a string.  
 -There is a function called `getRole` which seems to return the role of a given address.  
 -There is a function called `setRole` which seems to set a given role to a given address  
--There is a function called `getIdGodRole` which we can infer it gives the ID of the godRole if you enter an address.  
+-There is a function called `getIdGodRole` which we can infer returns the ID of the godRole if you give it an address.  
 
 ---
 Now let's open `contract.sol`, and read it.
-After a thorough analysis, we can see that the vulnerability is that the deployer wrote an "OR" `||` logical operator instead of an "AND" `&&`.  
+After a thorough analysis, we can see that the vulnerability consist on that the deployer wrote an "OR" `||` logical operator instead of an "AND" `&&`.  
 
-This address in the `setStringResponseAddress()` is the deployer of the contract. This means that it's address may we one which has high privileges and roles. (Bear that in mind)  
+This address in the `setStringResponseAddress()` is the deployer of the contract. This means that this address may we one which has high privileges and roles. (Bear that in mind)  
 ```s
 function setStringResponseAddress(address stringResponseAddress_) public {
         require(msg.sender == 0x7955923248F7EFB8F7BFfF8D8b25797a6493653d;
@@ -113,7 +113,7 @@ Create a new wallet in metamask, and import one of the 299 accounts, by entering
 
 ---
 Now switch to the CTF local blockchain `ctf.cyb3r4rena.com:8545`  
-Be sure to put the adecuate chainID, Metamask gives it to you after you write anything that doesn't correspond with it.  
+Be sure to put the adecuate chainID, Metamask gives it to you after introducing anything that doesn't correspond with it.  
 ChainID = 1337  
 Currency = ETH  
 
@@ -125,7 +125,7 @@ Currency = ETH
 ![100ETH](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/100ETH.png?raw=true)  
 
 ---
-Hop on to Remix, create a new file called `abi.abi`. Inside it copy the ABI content:  
+Hop on to Remix, create a new file called `abi.abi`. Inside of it, copy the ABI content:  
 
 ![abi.abi](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/remix-create-new-file.png?raw=true)  
 
@@ -135,7 +135,7 @@ It will ask you to connect with your metamask accounts, we need to check the one
 ![metamask-injected provider](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/metamask-injected-provider.png?raw=true)  
 
 ---
-Down in "At Address" introduce, the contract address and confirm. After this you will we offered to interact with the contract:  
+Down in "At Address" introduce, the contract address and confirm. After this you'll we offered to interact with the contract:  
 
 ![address-contract](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/contract-address.png?raw=true)  
 
@@ -146,6 +146,6 @@ Now set your role to 1, get the godRole ID, set it to your account and get the f
 ![get the flag](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/flag%20encrypted.png?raw=true)
 
 ---
-Turns out the flag was base64 encoded. Cyberchef returns this:  
+Turns out the flag was base64 encoded. Cyberchef returns us the plain text format:  
 
 ![flagdecrypted](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/flag%20decoded.png?raw=true)
