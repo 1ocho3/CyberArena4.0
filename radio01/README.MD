@@ -44,7 +44,7 @@ After doing this, set "Signal view" to demodulated, as URH will interpret the on
 ![signal1 demodulated view](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/signal1%20demodulated%20view.png?raw=true)
   
 ---
-The signal can be divided into to portions, a repeating synchronization pattern, and the actual message.
+The signal can be divided into two portions, a repeating synchronization pattern, and the actual message.
 In our case the synchronization pattern is no other than a string of 01 pairs repeated over and over again until a point where two zeros meet.  
 
 ![singal1-separated](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/signal1-message-separated.png?raw=true)  
