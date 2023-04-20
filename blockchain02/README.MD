@@ -129,13 +129,13 @@ Hop on to Remix, create a new file called `abi.abi`. Inside of it, copy the ABI 
 
 ![abi.abi](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/remix-create-new-file.png?raw=true)  
 
-Important! With the `abi.abi` file **selected** head to "Deploy and Run" and set the Enviroment to "Injected Provider - Metamask".  
+Head to "Deploy and Run" and set the Enviroment to "Injected Provider - Metamask".  
 It will ask you to connect with your metamask accounts, we need to check the one imported from the CTF and accept the connection:
 
 ![metamask-injected provider](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/metamask-injected-provider.png?raw=true)  
 
 ---
-Down in "At Address" introduce, the contract address and confirm. After this you'll we offered to interact with the contract:  
+Important! With the `abi.abi` file **selected** go to "At Address" and introduce the contract address and confirm. After this you'll we offered to interact with the contract:  
 
 ![address-contract](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/contract-address.png?raw=true)  
 
