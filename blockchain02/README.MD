@@ -74,7 +74,7 @@ function setStringResponseAddress(address stringResponseAddress_) public {
 Therfore anyone can use the `setRole()` function as long as they give the same address as the one they are using.  
 
 ```s
-    function setRole(address user, uint role) public {
+function setRole(address user, uint role) public {
         require(msg.sender == user || roles[msg.sender] > 0, "Access denied.");
         roles[user] = role;
     }
@@ -82,7 +82,7 @@ Therfore anyone can use the `setRole()` function as long as they give the same a
 
 The `getIdGodRole()` function, requires us to have the role "1" set up in our address.
 ```s
-    function getIdGodRole(address user) public view returns (uint) {
+function getIdGodRole(address user) public view returns (uint) {
         require(roles[user] > 2, "Access denied."); // only accessible by role 1
         return godRole;
     }
