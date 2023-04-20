@@ -37,7 +37,7 @@ Now that you understand what types of modulations there are, you can guess this 
 
 ---
 
-Knowing this, hop onto urh, and set modulation to FSK and hit AUTODETECT PARAMETERS.  
+Knowing this, hop onto URH, and set modulation to FSK and hit AUTODETECT PARAMETERS.  
 The signal is so clear that we won't need a bandpass filter.
 After doing this, set "Signal view" to demodulated, as URH will interpret the ones and zeros and give you the following view:  
 
@@ -50,7 +50,7 @@ In our case the synchronization pattern is no other than a string of 01 pairs re
 ![singal1-separated](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/signal1-message-separated.png?raw=true)  
 
 ---
-Manchester encoding works by translating a HIGH to LOW transitions as a zeros, and a LOW to HIGH as a ones:  
+Manchester encoding works by translating a HIGH to LOW transitions as zeros, and a LOW to HIGH as ones:  
 
 ![manchester encoding scheme](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/manchester-encoding-scheme.png?raw=true)
 
