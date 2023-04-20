@@ -63,7 +63,7 @@ With this we know:
 Now let's open `contract.sol`, and read it.
 After a thorough analysis, we can see that the vulnerability consist on that the deployer wrote an "OR" `||` logical operator instead of an "AND" `&&`.  
 
-This address in the `setStringResponseAddress()` is the deployer of the contract. This means that this address may we one which has high privileges and roles. (Bear that in mind)  
+This address in the `setStringResponseAddress()` is the deployer of the contract. This means that this address may be one which has high privileges and roles. (Bear that in mind)  
 ```s
 function setStringResponseAddress(address stringResponseAddress_) public {
         require(msg.sender == 0x7955923248F7EFB8F7BFfF8D8b25797a6493653d;
