@@ -27,7 +27,7 @@ HOW TO INTERACT WITH A SMART CONTRACT?
 
 First we need to understand how they are deployed. The blockchain has its users, and they can deploy their own contracts (programs written on blockchain specific language). 
 
-Deployed contracts have an address to refer to them when you want to connect. Normally in adittion to the address, to interact with some contracts you might need a configuration file, in this case the ABI content on the `ABI_and_contract.txt` file.
+Deployed contracts have an address to refer to them when you want to connect. Normally in adittion to the address, to interact with some contracts you might need a configuration file, in this case, the ABI content on the `ABI_and_contract.txt` file.
 Let's open `ABI_and_contract.txt`:  
 
 ![abi-and-contract](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/abi-and-contract-content.png?raw=true)
