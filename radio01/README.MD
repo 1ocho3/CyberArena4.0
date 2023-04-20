@@ -68,7 +68,7 @@ Returns the following __binary__ string:
 `011001100110110001100001011001110111101101110100011100100111100101011111011000010110011101100001011010010110111001111101`  
 
 ---
-To turn binary into plaintext, you can use one of the best kwonk decoding/decyphering online tools out there: [CyberChef](https://gchq.github.io/CyberChef/)  
+To turn binary into plaintext, you can use one of the best known decoding/decyphering online tools out there: [CyberChef](https://gchq.github.io/CyberChef/)  
 The output is a plain text string. Try the same process with the other transmissions to find the flag.
 
 ![nottheflag](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/not-the-flag-keep-trying.png?raw=true)
