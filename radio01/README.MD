@@ -10,13 +10,13 @@ THE CHALLENGE BEGS THE FOLLOWING QUESTION:
 
 "***THIS SIGNAL HAS BEEN INTERCEPTED AND IT IS BELIEVED THAT ENCODED INFORMATION IS BEING SENT TO PREVENT IT FROM BEING ANALYZED BY THIRD PARTIES. CAN YOU FIND OUT WHAT IT IS?***"  
 <br>
-Unzipping the file we are given, (```$ unzip radio01.zip```) outputs the following:  
+Unzipping the file given, (```$ unzip radio01.zip```) outputs the following:  
 -Furthermore we can see that it is a .raw file (basic raw data)  
 
 ![screenshot showing various command line inputs: 1st unzip radio01 2nd ls: radio01 ](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/content-initial-approach-terminal.png?raw=true)  
 
-For those of you who have already played with SDR devices, you may have come across various programms to annalyze signals.  
-Feel free to chose your own, but for the purpose of this challenge I will show you how to solve it with [UniversalRadioHacker](https://github.com/jopohl/urh) <-- Link to the repository for easy install.  
+For those who have already played with SDR devices, you may have come across various programms to annalyze signals.  
+Feel free to chose your own, but for the purpose of this challenge I will use [UniversalRadioHacker](https://github.com/jopohl/urh) <-- Link to the repository for easy install.  
 
 ---   
 Once in URH, open signals.raw and zoom-in on one of the packets.  
@@ -25,15 +25,15 @@ Once in URH, open signals.raw and zoom-in on one of the packets.
 ![signal1zoomed](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/signal1zoomed.png?raw=true)
 
 Now its time to guess the modulation scheme. There are 3 types: Amplitude, Frecuency, and Phase modulation. 
-They are easily recognizable. Hereby I hand the diagram to recognize modulation schemes, and a wonderful post to a deeper understanding.  
+They are easy to recognize. Here I post a diagram to recognize modulation schemes, and a wonderful article to a deeper understanding.  
 
 ---
 ![modulation scheme](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/modulation-scheme.jpg?raw=true)  
-[Wonderful post about modulation](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/Wireless_Fundamentals%3A_Modulation)  
+[Wonderful article about modulation](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/Wireless_Fundamentals%3A_Modulation)  
 
 ---
 
-Now that you understand what types of modulations there are, you can guess this is an analog signal in frequency-shift keying (FSK) or as is commonly known as, "frecuency modulated", where the change in frecuency is interpreted as ones and zeros (0/1).
+Now that you understand what types of modulations there are, you can guess this is frequency-shift keying (FSK) or as is commonly known as, "frecuency modulated", where the change in frecuency is interpreted as ones and zeros (0/1).
 
 ---
 
@@ -45,7 +45,7 @@ After doing this, set "Signal view" to demodulated, as URH will interpret the on
   
 ---
 The signal can be divided into two portions, a repeating synchronization pattern, and the actual message.
-In our case the synchronization pattern is no other than a string of 01 pairs repeated over and over again until a point where two zeros meet.  
+In our case the synchronization pattern is no other than a string of 01 pairs repeated over and over again until two zeros meet.  
 
 ![singal1-separated](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/signal1-message-separated.png?raw=true)  
 
@@ -54,7 +54,7 @@ Manchester encoding works by translating HIGH to LOW transitions as zeros, and a
 
 ![manchester encoding scheme](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/manchester-encoding-scheme.png?raw=true)
 
-Therefore, looking at our first message `01101001011010010110100...` and to the image above we see that their structures are very similar.  
+Therefore, looking at our first message `01101001011010010110100...` and at the image above we see that their structures are very similar.  
 Let's try and decode the message, we will use an online tool as it is as efective as URH and is easier for begginers.  
 
 ![manchester-decoder-online](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/manchester-decoded.png?raw=true)  
@@ -69,6 +69,6 @@ Returns the following __binary__ string:
 
 ---
 To turn binary into plaintext, you can use one of the best known decoding/decyphering online tools out there: [CyberChef](https://gchq.github.io/CyberChef/)  
-The output is a plain text string. Try the same process with the other transmissions to find the flag.
+The output is a plain text string. Repeat the process with the other packets to find the flag.
 
 ![nottheflag](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/not-the-flag-keep-trying.png?raw=true)
