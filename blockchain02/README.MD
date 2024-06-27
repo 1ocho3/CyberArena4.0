@@ -13,7 +13,7 @@ THE CHALLENGE BEGS THE FOLLOWING QUESTION:
 
 ---  
 
-We are given the following files:  
+The following files are given:  
 
 -The contract deployed on the local blockchain, `contract.sol`, written in Solidity language.  
 -What appears to be two text files `ABI_and_contract.txt` and `accounts.txt`.  
