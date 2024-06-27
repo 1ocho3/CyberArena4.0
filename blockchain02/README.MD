@@ -25,9 +25,9 @@ The following files are given:
 ---
 HOW TO INTERACT WITH A SMART CONTRACT?  
 
-First we need to understand how they are deployed. The blockchain has its users, and they can deploy their own contracts (programs written on blockchain specific language). 
+First we need to understand how contracts are deployed. The blockchain has its users, and they can upload their own contracts (programs written on blockchain specific language). 
 
-Deployed contracts have an address to refer to them when you want to connect. Normally in adittion to the address, to interact with some contracts you might need a configuration file, in this case, the ABI content on the `ABI_and_contract.txt` file.
+Upload (Deployed) contracts have an address to refer to them when you want to connect. Normally in adittion to the address, to be able to interact, you might need a configuration file, in this case, the ABI content on the `ABI_and_contract.txt` file.
 Let's open `ABI_and_contract.txt`:  
 
 ![abi-and-contract](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/abi-and-contract-content.png?raw=true)
@@ -53,7 +53,7 @@ interface MyInterface {
 }
 ```
 
-With this we know:  
+With this we now know:  
 -There is a function called `getFlag` which returns a string.  
 -There is a function called `getRole` which seems to return the role of a given address.  
 -There is a function called `setRole` which seems to set a given role to a given address  
@@ -61,7 +61,7 @@ With this we know:
 
 ---
 Now let's open `contract.sol`, and read it.
-After a thorough analysis, we can see that the vulnerability consist on that the deployer wrote an "OR" `||` logical operator instead of an "AND" `&&`.  
+After a thorough analysis, we can see that the vulnerability relies on the fact that the deployer wrote an "OR" `||` logical operator instead of an "AND" `&&`.  
 
 This address in the `setStringResponseAddress()` is the deployer of the contract. This means that this address may be one which has high privileges and roles. (Bear that in mind)  
 ```s
@@ -96,13 +96,13 @@ function getFlag() public view returns (string memory) {
         return flag; // return flag
     }
 ```
-###### NOTE THAT SENSIBLE INFORMATION WAS REDACTED ON PURPOSE BY THE CTF TEAM, TO ALLOW US TO UNDERSTAND HOW THE CONTRACT WORKS, KNOWING THE LEAST POSSIBLE INFORMATION.
+###### NOTE THAT SENSIBLE INFORMATION WAS REDACTED ON PURPOSE BY THE CTF TEAM
 
 ---
-After the analysis, the path to get the flag gets clear.  
--First we would need to set our own role as 1  
+After further analysis, the path to get the flag gets clearer.  
+-First we need to set our own role as 1  
 -Then we should use `getIdGodRole()` from an address that might have godRole. (The deployer account may have godRole)
--After getting the ID and making our address have godRole, we just need to call `getFlag()` to get our flag.
+-After getting the ID and making our address godRole, we just need to call `getFlag()` to get our flag.
 
 ---
 For this, we need a crypto-wallet. I recommend you install [METAMASK](https://metamask.io/download/), and an ethereum IDE like [REMIX](https://remix.ethereum.org).  
@@ -125,7 +125,7 @@ Currency = ETH
 ![100ETH](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/100ETH.png?raw=true)  
 
 ---
-Hop on to Remix, create a new file called `abi.abi`. Inside of it, copy the ABI content:  
+Hop on to Remix, create a new file called `abi.abi`, and inside of it, copy the ABI content:  
 
 ![abi.abi](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/remix-create-new-file.png?raw=true)  
 
