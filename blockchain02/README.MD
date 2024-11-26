@@ -27,7 +27,7 @@ HOW TO INTERACT WITH A SMART CONTRACT?
 
 First we need to understand how contracts are deployed. The blockchain has its users, and they can upload their own contracts (programs written on blockchain specific language). 
 
-Upload (Deployed) contracts have an address to refer to them when you want to connect. Normally in adittion to the address, to be able to interact, you might need a configuration file, in this case, the ABI content on the `ABI_and_contract.txt` file.
+Uploaded (Deployed) contracts have an address to refer to them when you want to connect. Normally in adittion to the address, to be able to interact, you might need a configuration file, in this case, the ABI content on the `ABI_and_contract.txt` file.
 Let's open `ABI_and_contract.txt`:  
 
 ![abi-and-contract](https://github.com/1ocho3/CyberArena4.0/blob/main/blockchain02/readme-required/abi-and-contract-content.png?raw=true)
@@ -61,7 +61,7 @@ With this we now know:
 
 ---
 Now let's open `contract.sol`, and read it.
-After a thorough analysis, we can see that the vulnerability relies on the fact that the deployer wrote an "OR" `||` logical operator instead of an "AND" `&&`.  
+After a thorough analysis, we can see that the vulnerability relies on the fact that the deployer wrote an "OR" `||` logical operator instead of an "AND" operator `&&`.  
 
 This address in the `setStringResponseAddress()` is the deployer of the contract. This means that this address may be one which has high privileges and roles. (Bear that in mind)  
 ```s
