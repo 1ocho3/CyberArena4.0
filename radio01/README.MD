@@ -10,13 +10,13 @@ THE CHALLENGE BEGS THE FOLLOWING QUESTION:
 
 "***THIS SIGNAL HAS BEEN INTERCEPTED AND IT IS BELIEVED THAT ENCODED INFORMATION IS BEING SENT TO PREVENT IT FROM BEING ANALYZED BY THIRD PARTIES. CAN YOU FIND OUT WHAT IT IS?***"  
 <br>
-Unzipping the file given, (```$ unzip radio01.zip```) outputs the following:  
--Furthermore we can see that it is a .raw file (basic raw data)  
+Unzipping the file (```$ unzip radio01.zip```) outputs the following:  
+-We can see it is a .raw file (basic raw data)  
 
 ![screenshot showing various command line inputs: 1st unzip radio01 2nd ls: radio01 ](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/content-initial-approach-terminal.png?raw=true)  
 
-For those who have already played with SDR devices, you may have come across various programms to annalyze signals.  
-Feel free to chose your own, but for the purpose of this challenge I will use [UniversalRadioHacker](https://github.com/jopohl/urh) <-- Link to the repository for easy install.  
+For those who have already played with SDR devices, you may have come across various programms to annalyze and interprete signals.  
+Feel free to chose your own, but for the purpose of this challenge I'll use [UniversalRadioHacker](https://github.com/jopohl/urh) <-- Link to the repository for easy install.  
 
 ---   
 Once in URH, open signals.raw and zoom-in on one of the packets.  
@@ -25,7 +25,7 @@ Once in URH, open signals.raw and zoom-in on one of the packets.
 ![signal1zoomed](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/signal1zoomed.png?raw=true)
 
 Now its time to guess the modulation scheme. There are 3 types: Amplitude, Frecuency, and Phase modulation. 
-They are easy to recognize. Here I post a diagram to recognize modulation schemes, and a wonderful article to a deeper understanding.  
+They are easy to recognize. Here I post a diagram to better fathom modulation schemes, and a wonderful article to a deeper understanding.  
 
 ---
 ![modulation scheme](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/modulation-scheme.jpg?raw=true)  
@@ -38,7 +38,7 @@ Now that you understand what types of modulations there are, you can guess this 
 ---
 
 Knowing this, hop onto URH, and set modulation to FSK and hit AUTODETECT PARAMETERS.  
-The signal is so clear that we won't need a bandpass filter.
+The signal is so clear that we won't need a bandpass filter or any sort of cleansing.
 After doing this, set "Signal view" to demodulated, as URH will interpret the ones and zeros and give you the following view:  
 
 ![signal1 demodulated view](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/signal1%20demodulated%20view.png?raw=true)
@@ -68,7 +68,7 @@ Returns the following __binary__ string:
 `011001100110110001100001011001110111101101110100011100100111100101011111011000010110011101100001011010010110111001111101`  
 
 ---
-To turn binary into plaintext, you can use one of the best known decoding/decyphering online tools out there: [CyberChef](https://gchq.github.io/CyberChef/)  
+To turn binary into plaintext, you can use one of the simplest and most known decoding/decyphering online tools out there: [CyberChef](https://gchq.github.io/CyberChef/)  
 The output is a plain text string. Repeat the process with the other packets to find the flag.
 
 ![nottheflag](https://github.com/1ocho3/CyberArena4.0/blob/main/radio01/readme-required/not-the-flag-keep-trying.png?raw=true)
